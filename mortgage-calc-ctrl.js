@@ -2,8 +2,9 @@ console.clear();
 
 console.log(document.getElementsByName("incomeField").length);
 
-document.onload = function(){
-    showPage("page_calculator");
+window.onload = function(){
+    showPage("Calculator");
+    document.getElementById('page_rente').style.display = 'none';
 }
 
 for(var i = 0; i < document.getElementsByName("incomeField").length; i++){
