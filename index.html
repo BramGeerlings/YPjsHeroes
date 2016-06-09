@@ -6,31 +6,45 @@
 <div class="text-title">Hypotheek Calculator</div>
 
 <div>
-    <input type="button" class='menu-button' id="submitButton" value="Calculator">
-    <input type="button" class='menu-button' id="submitButton" value="Rente">
-    <input type="button" class='menu-button' id="submitButton" value="Voorwaarden">
+    <input type="button" class='menu-button' value="Calculator">
+    <input type="button" class='menu-button' value="Rente">
+    <input type="button" class='menu-button' value="Voorwaarden">
 </div>
 
-<div class="cleared spaced">
-    <form>
+<div id="page_calculator">
+    <div class="cleared spaced">
+        <form>
+            <label class="cleared">Uw bruto jaarinkomen<br></label>
+            <input type="number" class='centered-field' name="incomeField" value="0"><br>
 
-        <label class="cleared">Uw bruto jaarinkomen<br></label>
-        <input type="number" class='centered-field' name="incomeField" value="0"><br>
+            <label>Partner bruto jaarinkomen<br></label>
+            <input type="number" class='centered-field' name="incomeField" value="0"><br>
+        </form>
+    </div>
 
-        <label>Partner bruto jaarinkomen<br></label>
-        <input type="number" class='centered-field' name="incomeField" value="0"><br>
-    </form>
+    <div class="centered">
+        <input type="button" class='submit-button' id="submitButton" value="Bereken"><br>
+    </div>
+
+    <label class="spaced">U kunt maximaal lenen: </label>
+
+    <p>
+        <div id="total" class=spaced> </div>
+    </p>
 </div>
 
-<div class="centered">
-    <input type="button" class=' submit-button' id="submitButton" value="Bereken"><br>
+<div id="page_rente">
+    <div class="cleared spaced">
+        <label class="cleared">Iets over rente<br></label>
+    </div>
 </div>
 
-<label class="spaced">U kunt maximaal lenen: </label>
+<div id="page_voorwaarden">
+    <div class="cleared spaced">
+        <label class="cleared">Iets over voorwaarden<br></label>
+    </div>
+</div>
 
-<p>
-    <div id="total" class=s paced> </div>
-</p>
 
 <script src="mortgage-calc-ctrl.js"></script>
 
