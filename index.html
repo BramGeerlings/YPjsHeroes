@@ -1,14 +1,37 @@
 <html>
-     <form>
-         <div>Uw bruto jaarinkomen </div>
-         <input type = "text" name = "incomeField" value = "0"><br><br>
-         <div>Partner bruto jaarinkomen</div>
-         <input type = "text" name = "incomeField" value = "0"><br>
-         <input type = "button" id = "submitButton" value= "Bereken">
-     </form> 
-     
-     <p>U kunt maximaal lenen: </p>
-     <div id = "total"> </div>  
-       
-  <script src="mortgage-calc-ctrl.js"></script>
+
+<head>
+    <link rel='stylesheet' href='calcStyle.css'>
+</head>
+<div class="text-title">Hypotheek Calculator</div>
+
+<div>
+    <input type="button" class='menu-button' id="submitButton" value="Calculator">
+    <input type="button" class='menu-button' id="submitButton" value="Rente">
+    <input type="button" class='menu-button' id="submitButton" value="Voorwaarden">
+</div>
+
+<div class="cleared spaced">
+    <form>
+
+        <label class="cleared">Uw bruto jaarinkomen<br></label>
+        <input type="number" class='centered-field' name="incomeField" value="0"><br>
+
+        <label>Partner bruto jaarinkomen<br></label>
+        <input type="number" class='centered-field' name="incomeField" value="0"><br>
+    </form>
+</div>
+
+<div class="centered">
+    <input type="button" class=' submit-button' id="submitButton" value="Bereken"><br>
+</div>
+
+<label class="spaced">U kunt maximaal lenen: </label>
+
+<p>
+    <div id="total" class=s paced> </div>
+</p>
+
+<script src="mortgage-calc-ctrl.js"></script>
+
 </html>
