@@ -19,21 +19,17 @@ body{
     clear:left;
 }
 
-.submit-button:hover{
-   background-color:  #f2a878;   
-}
-
 .menu-button{
     background-color: #fd6400;
     border: none;
     color: white;    
-    padding: 15px ;
+    padding: 8px 0px 8px 0px ;
     text-align: center;
     text-decoration: none;
     display: block;    
     font-size: 16px;
     float:left;
-    width: 33%;
+    width: 33.3%;    
     margin: 12px 0px;
 }
 
@@ -42,10 +38,10 @@ body{
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 320px){
     .submit-button{
         text-align: center;   
-        width: 95%;     
+        width: 100%;     
     }
       .text-title{
         font-size:25px;
@@ -64,5 +60,9 @@ body{
         display: inline-block;
         width: 80%;
         margin: 8px 0px;
+    }
+
+    object{        
+        height:100%;
     }
 }
