@@ -1,9 +1,23 @@
+<html>
 <head>
     <link rel='stylesheet' href='calcStyle.css'>
 </head>
-
 <div id="page_rente">
     <div class="cleared spaced">
-        <label class="cleared">Iets over rente<br></label>
+        <div class="text-subtitle spaced">Actuele Hypotheek Rente</div>
+        <div class="centered" style="color: #009"><div id='currentRate'></div>% op basis van 10 jaar<br><br></div>
     </div>
+    <form >
+        <label class="cleared">Gezamenlijk jaarinkomen:<br></label>
+        <input type="number" class='centered-field' name="incomeField" value="0"><br>
+    </form>
+    <div class="centered">
+        <input type="button" class='submit-button' id="submitButton" value="Bereken bruto maandlast"><br>
+    </div>
+    <label id="total" style="color: #009" ></label>
+    
+        
+  
 </div>
+<script src="mortgage-calc-ctrl.js"></script>
+</html>

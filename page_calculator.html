@@ -3,11 +3,10 @@
     <link rel='stylesheet' href='calcStyle.css'>
 </head>
     <div id="page_calculator">
-        <div class="cleared spaced">
+        <div class="cleared">
             <form>
                 <label class="cleared">Uw bruto jaarinkomen<br></label>
                 <input type="number" class='centered-field' name="incomeField" value="0"><br>
-
                 <label>Partner bruto jaarinkomen<br></label>
                 <input type="number" class='centered-field' name="incomeField" value="0"><br>
             </form>
@@ -16,10 +15,9 @@
         <div class="centered">
             <input type="button" class='submit-button' id="submitButton" value="Bereken"><br>
         </div>
-        <label class="spaced">U kunt maximaal lenen: </label>
-        <p>
-            <div id="total" class=spaced> </div>
-        </p>
+        <br>
+<br>
+        <label  id="total"></label>        
     </div>
     <script src="mortgage-calc-ctrl.js"></script>
 </html>

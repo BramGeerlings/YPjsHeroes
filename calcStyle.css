@@ -49,6 +49,12 @@ body{
         text-align: center;
     }
 
+      .text-subtitle{
+        font-size:20px;
+        color: #009;
+        text-align: center;
+    }
+
      .inputfield{        
         color: #009;
         text-align: center;
@@ -58,11 +64,19 @@ body{
     }
     .centered-field{
         display: inline-block;
-        width: 80%;
+        width: 100%;
         margin: 8px 0px;
+    }
+
+    #total{
+        color: #009;        
     }
 
     object{        
         height:100%;
+    }
+
+    #currentRate{
+        display: inline;
     }
 }
