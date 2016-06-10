@@ -1,10 +1,8 @@
 console.clear();
 
-console.log(document.getElementsByName("incomeField").length);
-
 window.onload = function(){
-    showPage("Calculator");
-    document.getElementById('page_rente').style.display = 'none';
+    init();
+   
 }
 
 for(var i = 0; i < document.getElementsByName("incomeField").length; i++){
@@ -40,11 +38,13 @@ function validateAndSubmit() {
     http.send(null);
 }
 
-function showPage(e){
-    console.log(e.target.value.toLowerCase());
+function showPage(e){ 
     var pages = ['page_calculator','page_rente','page_voorwaarden'];
-    var selectedPage = 'page_'+e.target.value.toLowerCase();
+    var selectedPage = 'page_'; 
     
+    e.target? selectedPage += e.target.value.toLowerCase():
+    selectedPage += e.toLowerCase();
+   
     for(page of pages){
         page != selectedPage ? document.getElementById(page).style.display = 'none':
         document.getElementById(selectedPage).style.display = 'initial'; 
@@ -58,5 +58,10 @@ function quickParseParams(){
         parameter += "income" + (i+1)+ "=" +arguments[i];
     }
     return parameter;
+}
+
+function init(){
+    showPage("Calculator");    
+   
 }
 
