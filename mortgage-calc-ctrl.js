@@ -21,12 +21,16 @@ function validateAndSubmit() {
             calculateInterest();
             break;
     }
-
 }
 
 function calculateMortgage() {
     var val1 = document.getElementsByName("incomeField")[0].value;
     var val2 = document.getElementsByName("incomeField")[1].value;
+
+    var values = [val1,val2];
+    fillIncomeLabels(values);
+   
+
 
     var http = new XMLHttpRequest();
     var url = 'http://agile-wave-86684.herokuapp.com/max-to-loan';
@@ -38,7 +42,7 @@ function calculateMortgage() {
         if (http.readyState == 4 && http.status == 200) {
             var maxTeLenen = parseInt(JSON.parse(http.responseText).maxToLoan);
             maxTeLenen = parseFloat(maxTeLenen).formatMoney(2,",");
-            document.getElementById('total').innerHTML = "U kunt maximaal lenen: " + maxTeLenen + " euro";
+            document.getElementById('total').innerHTML = maxTeLenen + " euro";
         } else if (http.readyState == 4 && http.status != 200) {
             document.getElementById('total').innerHTML = 'Voer alleen numerieke karakters in';
         }
@@ -51,7 +55,9 @@ function calculateMortgage() {
 
 function calculateInterest() {
     var val = document.getElementsByName("incomeField")[0].value;
+   
     var interest = ' ';
+    fillIncomeLabels(val);
     if (document.getElementById('currentRate')) {
         interest = parseFloat(document.getElementById('currentRate').innerHTML);
     }
@@ -59,6 +65,16 @@ function calculateInterest() {
     var trueInterest = Math.round(((val / 12) * interest) * 100) / 100;
     trueInterest = parseFloat(trueInterest).formatMoney(2,",");
     document.getElementById('total').innerHTML = 'Bruto maandlast: ' + trueInterest + ' euro';
+}
+
+function fillIncomeLabels(incomeValues){
+    
+    values = incomeValues;   
+     for (var i = 0; i < document.getElementsByClassName('rangeInput').length; i++) {
+        var value = values instanceof Array ? parseFloat(values[i]) : parseFloat(values);       
+        value = value.formatMoney(2,","); 
+        document.getElementsByClassName('rangeInput')[i].innerHTML = value + ' euro';
+    }
 }
 
 ///NIET ZELF GESCHREVEN!!!
