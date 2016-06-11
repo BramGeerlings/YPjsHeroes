@@ -13,19 +13,45 @@ for (element of document.getElementsByClassName("menu-button")) {
 var menuButtons = document.getElementsByClassName('menu-button');
 
 function validateAndSubmit() {
+
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+    var inputType = width > 801? "Number" : "range";
+
     switch (true) {
-        case !!document.getElementById("page_calculator"):
-            calculateMortgage();
+        case !!document.getElementById("page_calculator"):            
+            calculateMortgage(getInputFieldsByType(inputType));
             break;
         case !!document.getElementById("page_rente"):
-            calculateInterest();
+            calculateInterest(getInputFieldsByType(inputType));
             break;
     }
 }
 
-function calculateMortgage() {
-    var val1 = document.getElementsByName("incomeField")[0].value;
-    var val2 = document.getElementsByName("incomeField")[1].value;
+function getInputFieldsByType(input){  
+     var fields = [];  
+    switch(input){
+        case "Number":           
+            for(element of document.getElementsByName("incomeField")){                
+                if(element.type === input.toLowerCase()){
+                    fields.push(element);
+                }
+            }    
+            return fields;      
+               
+        case "range":
+           for(element of document.getElementsByName("incomeField")){                
+                if(element.type === input.toLowerCase()){
+                    fields.push(element);
+                }
+            }            
+        return fields;
+    }
+}
+function calculateMortgage(values) {   
+    
+    var val1 = values[0].value;
+    var val2 = values[1].value;
 
     var values = [val1,val2];
     fillIncomeLabels(values);
@@ -53,8 +79,8 @@ function calculateMortgage() {
 
 
 
-function calculateInterest() {
-    var val = document.getElementsByName("incomeField")[0].value;
+function calculateInterest(values) {
+    var val = values[0].value;
    
     var interest = ' ';
     fillIncomeLabels(val);

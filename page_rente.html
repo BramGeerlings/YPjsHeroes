@@ -3,21 +3,26 @@
       <link rel='stylesheet' href='calcStyle.css'>
 </head>
 <div id="page_rente">
+    <div class = mobile-only>
     <div class="cleared spaced">
         <div class="text-subtitle spaced">Actuele Hypotheek Rente</div>
         <div class="centered" style="color: #009"><div id='currentRate'></div>% op basis van 10 jaar<br><br></div>
     </div>
     <form >
-        <label class="cleared"><br>Gezamenlijk jaarinkomen: <div class = 'rangeInput'>0 euro</div><br></label>
-        <input type="range" min = "0" max ="200000" step = '1000' class='centered-field' name="incomeField" value="0"><br>
+        <label class="cleared"><br>Gezamenlijk jaarinkomen: <div class = 'rangeInput'>0 euro</div><br></label>        
+        <input type="range" min = "0" max ="100000" step = '1000' class='centered-field' name="incomeField" value="0"><br>
     </form>
+    </div>
+    <div class = 'desktop-only'
+    <form class = 'desktop-only'>
+        <label class="cleared"><br>Gezamenlijk jaarinkomen: <div class = 'rangeInput'>0 euro</div><br></label>        
+         <input type="number" class='centered-field desktop-only' name="incomeField" value="0"><br>
+    </form>    
     <div class="centered">
         <input type="button" class='submit-button' id="submitButton" value="Bereken bruto maandlast"><br>
     </div>
-    <label id="total" style="color: #009" ></label>
-    
-        
-  
+    </div>
+    <label id="total" style="color: #009" ></label>  
 </div>
 <script src="mortgage-calc-ctrl.js"></script>
 </html>

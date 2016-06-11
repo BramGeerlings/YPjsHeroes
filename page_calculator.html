@@ -4,16 +4,22 @@
 </head>
     <div id="page_calculator">
         <div class="cleared">
-            <form>
+            <form class = 'mobile-only'>
                 <label class="cleared"><br>Uw bruto jaarinkomen: <div class = 'rangeInput'>0 euro</div><br></label>
-                <input type="range" min = "0" max ="100000" step = '1000' class='centered-field' name="incomeField" value="0"><br>
+                <input type="range" min = "0" max ="100000" step = '1000' class='centered-field' name="incomeField" value="0"><br>               
                 <label><br><br>Partner bruto jaarinkomen: <div class = 'rangeInput'>0 euro</div><br><br></label>
-                <input type="range" min = "0" max ="100000" step = '1000' class='centered-field' name="incomeField" value="0"><br>
+                <input type="range" min = "0" max ="100000" step = '1000' class='centered-field' name="incomeField" value="0"><br>               
+            </form>
+            <form class = 'desktop-only'>
+                <label class="cleared"><br>Uw bruto jaarinkomen:<br></label>
+                <input type="Number"  class='centered-field' name="incomeField" value="0"><br>               
+                <label><br><br>Partner bruto jaarinkomen:<br><br></label>
+                <input type="Number"  class='centered-field' name="incomeField" value="0"><br><br>               
             </form>
         </div>
 
         <div class="centered">
-            <input type="button" class='submit-button' id="submitButton" value="Bereken"><br>
+            <input type="button" class='submit-button desktop-only' id="submitButton" value="Bereken"><br>
         </div>       
         <label><p>U kunt maximaal lenen: </p></label>
         <label  id="total"></label>        

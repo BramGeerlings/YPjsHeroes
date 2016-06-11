@@ -3,17 +3,7 @@ body{
     font-size:16px;    
 }
 
-.submit-button {
-    background-color: #fd6400;
-    border: none;
-    color: white;    
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;    
-    font-size: 16px;
-    margin: 12px 0px;
-}
+
 
 .cleared{
     clear:left;
@@ -37,17 +27,38 @@ body{
     margin: 10px 0px 10px 20px;
 }
 
-  object{        
-        height:60%;
-        width: 100%;        
-    }
+  
 
 @media (min-width: 801px){
+
+     .mobile-only{
+         display: none;
+     }
+     .desktop-only{
+         display: initial;
+     }
     
+object{        
+        height:70%;
+        width: 100%; 
+        overflow: auto;       
+    }
+
     .menu-button{
         width: 10%;
         
     }
+    .submit-button {
+    background-color: #fd6400;
+    border: none;
+    color: white;    
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+    font-size: 16px;
+    margin: 12px 0px;
+}
 
     #border{
         background-color: #009;
@@ -63,13 +74,35 @@ body{
         font-size:36px;
         color: #009;
         text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
+
+    #desktop-logo{
+        background-image: url(rabobank-logo.png);
+        width:124px;
+        height:148px;
+        float:left;
+        max-width: 100%;
+        max-height: auto;
+    }
+   
+    
 }
 
 @media (max-width: 800px){
-    .submit-button{
-        display: none;  
-    }
+
+    .mobile-only{
+         display: initial;
+     }
+     .desktop-only{
+         display: none;
+     }
+
+    object{        
+        height:60%;
+        width: 100%;        
+    }    
 
     .menu-button{
         width: 33.3%;
@@ -110,6 +143,7 @@ body{
 
      .md-scroll-mask { position: initial;}
 
+    
      input[type=range]{
     -webkit-appearance: none;
     width : 100%;
