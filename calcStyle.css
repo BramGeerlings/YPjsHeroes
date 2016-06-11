@@ -37,12 +37,45 @@ body{
     margin: 10px 0px 10px 20px;
 }
 
+  object{        
+        height:60%;
+        width: 100%;        
+    }
 
-@media (max-width: 320px){
+@media (min-width: 801px){
+    
+    .menu-button{
+        width: 10%;
+        
+    }
+
+    #border{
+        background-color: #009;
+        width: 100%;
+        height:34px;
+        position: relative;
+        top:12px;
+        z-index : -1;
+        
+    }
+
+    .text-title{
+        font-size:36px;
+        color: #009;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px){
     .submit-button{
         display: none;  
     }
-      .text-title{
+
+    .menu-button{
+        width: 33.3%;
+    }
+    
+    .text-title{
         font-size:25px;
         color: #009;
         text-align: center;
@@ -71,10 +104,6 @@ body{
         color: #009;        
     }
 
-    object{        
-        height:100%;
-    }
-
     #currentRate{
         display: inline;
     }
@@ -83,10 +112,10 @@ body{
 
      input[type=range]{
     -webkit-appearance: none;
+    width : 100%;
     }
 
-    input[type=range]::-webkit-slider-runnable-track {
-    width: 300px;
+    input[type=range]::-webkit-slider-runnable-track {   
     height: 5px;
     background: #ddd;
     border: none;
@@ -111,5 +140,19 @@ body{
         background: #ccc;
     }
 
+    #mobile-logo-container{
+        position: absolute;
+        left:50%;
+    }
+
+    #mobile-logo{
+        background-image: url(rabobank-logo-mobile.png);
+        display: block;
+        width:96px;
+        height:33px;
+        margin-left: -48px;
+        position: relative;
+
+    }
 
 }

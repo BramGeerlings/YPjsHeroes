@@ -1,20 +1,25 @@
-<html >
+<html>
 
 <head>
     <link rel='stylesheet' href='calcStyle.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<div class="text-title">Hypotheek Calculator</div>
+<body>
+    <div class="text-title">Hypotheek Calculator</div>
 
-<div>
-    <input type="button" class='menu-button' value="Calculator">
-    <input type="button" class='menu-button' value="Rente">
-    <input type="button" class='menu-button' value="Voorwaarden">
-</div>
+    <div>
+        <input type="button" class='menu-button' value="Calculator">
+        <input type="button" class='menu-button' value="Rente">
+        <input type="button" class='menu-button' value="Voorwaarden">
+        <div id="border"></div>
+    </div>
 
-<div id='content'></div>
-
-<script src="mortgage-calc-ctrl.js"></script>
+    <div id='content'></div>
+    <div id='mobile-logo-container'>
+        <div id='mobile-logo'></div>
+    </div>
+    <script src="mortgage-calc-ctrl.js"></script>
+</body>
 
 </html>
